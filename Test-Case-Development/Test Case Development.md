@@ -14,14 +14,15 @@ Refer to RTM for the ID numbers.
 |----------------------|--------------------------------|---------------------------------|
 |                      | KingofthePiratesoftheGrandLine | AKingofthePiratesoftheGrandLine |
 
-| 0 character Password | 30 characters Password         |31 characters Password|
-|----------------------|--------------------------------|-|
-|                      | WholeCakeIslandWasAHorribleArc |WholeCakeIslandWasAHorribleArc!|
+| 0 character Password | 30 characters Password         | 31 characters Password          |
+|----------------------|--------------------------------|---------------------------------|
+|                      | WholeCakeIslandWasAHorribleArc | WholeCakeIslandWasAHorribleArc! |
 
 #### 2. Requirement: Users should have unique usernames
 | Unique Username | Non-Unique Username |
 |-----------------|---------------------|
 | Luffy           | Zoro                |
+
 For the non-unique username, we will have to ensure there is a created User with "Zoro" as their username
 
 #### 3. Requirement: Passwords should never be visible in plaintext
@@ -71,7 +72,7 @@ Use positive and negative test data found for the first two requirements
 | Step                                                                                     | Actor         | Data                   | Result                                                 |
 |------------------------------------------------------------------------------------------|---------------|------------------------|--------------------------------------------------------| 
 | Given the user is on the login page                                                      | existing user | http://localhost:8080/ |                                                        |
-| When the user provides valid {*username*} and {*password*} and preses the "Login" button | ^^            | {username}, {password} | they should be redirected to the "Create Account" page |
+| when the user provides valid {*username*} and {*password*} and preses the "Login" button | ^^            | {username}, {password} | they should be redirected to the "Create Account" page |
 | then the user should be redirected and see their planetarium                             | ^^            |                        | redirect to Home Page                                  |
 
 #### Negative Test Scenario
@@ -106,6 +107,7 @@ Refer to *ID = 2: Positive Parameterized Test Scenario*
 | Unique Planet | Non-Unique Planet |
 |---------------|-------------------|
 | Raftel        | East Blue         |
+
 For the non-unique planet name, we will have to ensure there is a created Planet with "East Blue" inside of a User's planetarium
 
 #### 3. Requirement: Planets should be "owned" by the user that added it to the Planetarium
@@ -209,6 +211,7 @@ Use positive and negative test data found for the first two and the fourth requi
 | Unique Planet | Non-Unique Planet |
 |---------------|-------------------|
 | Whiskey Peak  | Alubarna          |
+
 For the non-unique moon name, we will have to ensure there is a created Moon with "Alubarna" inside a User's planetarium
 
 #### 3. Requirement: Moons should be "owned" by the user that added it to the Planetarium
@@ -287,7 +290,7 @@ Use positive and negative test data found for the first two and the fourth requi
 | then the table refreshes                                                                                    | ^^     |                                   | {planet name} is removed from table |
 
 #### Test Scenario for Negative Moon Removal
-**_It is important to note that data must already be added to a user's account
+**_It is important to note that data must already be added to a user's account_
 
 *For an invalid planet name, refer to *ID = 6*
 
